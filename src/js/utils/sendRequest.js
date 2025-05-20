@@ -29,15 +29,15 @@ export const sendRequest = (data, url, options) => {
     };
 
     // encode url
-    url = encodeURI(url);
-
-    // if method is GET, add any received data to url
-    
-    if (isGet(options.method) && data) {
-        url = `${url}${encodeURIComponent(
-            typeof data === 'string' ? data : JSON.stringify(data)
-        )}`;
-    }
+    // url = encodeURI(url);
+    //
+    // // if method is GET, add any received data to url
+    //
+    // if (isGet(options.method) && data) {
+    //     url = `${url}${encodeURIComponent(
+    //         typeof data === 'string' ? data : JSON.stringify(data)
+    //     )}`;
+    // }
 
     // create request
     const xhr = new XMLHttpRequest();
